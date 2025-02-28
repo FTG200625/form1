@@ -1,6 +1,7 @@
 package packages;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class informationPage {
 
@@ -8,6 +9,8 @@ public class informationPage {
         // Create the main panel
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel,BoxLayout.PAGE_AXIS));
+        panel.setBackground(new Color(0xCF9518));
+
 
         // Name Label and Text Field
         JLabel nameLabel = new JLabel("اسم");

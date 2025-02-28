@@ -16,6 +16,7 @@ public class Main {
         // Create and configure the main panel
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
+        panel.setBackground(new Color(0xCF9518));
 
 
         // Create title label

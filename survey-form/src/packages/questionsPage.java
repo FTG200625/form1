@@ -9,6 +9,7 @@ public class questionsPage {
         // Create and configure the panel
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel,BoxLayout.PAGE_AXIS));
+        panel.setBackground(new Color(0xCF9518));
 
         // Question 1
         JLabel question1 = new JLabel("چقدر رابط کاربری نرم افزار از نظر شما جذاب است؟");
