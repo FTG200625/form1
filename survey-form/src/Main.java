@@ -21,11 +21,14 @@ public class Main {
 
         // Create title label
         JLabel title = new JLabel("survey form");
-        title.setBounds(10, 10, 100, 20);
+        title.setHorizontalAlignment(JLabel.CENTER);
+        title.setVerticalAlignment(JLabel.NORTH);
 
         // Create start button
         JButton startButton = new JButton("start!");
-        startButton.setBounds(10, 40, 100, 20);
+        startButton.setHorizontalAlignment(JLabel.CENTER);
+        startButton.setVerticalAlignment(JLabel.CENTER);
+
 
         // Add components to the panel
         panel.add(title);
