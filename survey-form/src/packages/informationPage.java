@@ -12,24 +12,26 @@ public class informationPage {
         panel.setBackground(new Color(0xCF9518));
 
         // Name Label and Text Field
-        JLabel nameLabel = new JLabel("اسم");
+        JLabel nameLabel = new JLabel("name");
         JTextField nameField = new JTextField(15);
 
         // Age Label and Text Field
-        JLabel ageLabel = new JLabel("سن");
+
+        JLabel ageLabel = new JLabel("age");
         JTextField ageField = new JTextField(15);
 
         // Email Label and Text Field
-        JLabel emailLabel = new JLabel("ایمیل");
+        JLabel emailLabel = new JLabel("email");
         JTextField emailField = new JTextField(15);
 
         // Software Familiarity Level
-        JLabel levelLabel = new JLabel("سطح آشنایی با نرم افزارهای مشابه");
 
-        JRadioButton level1 = new JRadioButton("مبتدی");
-        JRadioButton level2 = new JRadioButton("متوسط");
-        JRadioButton level3 = new JRadioButton("پیشرفته");
-        JRadioButton level4 = new JRadioButton("بدون آشنایی");
+        JLabel levelLabel = new JLabel("the level of familiarity to software:");
+
+        JRadioButton level1 = new JRadioButton("begginer");
+        JRadioButton level2 = new JRadioButton("intermediate");
+        JRadioButton level3 = new JRadioButton("advanced");
+        JRadioButton level4 = new JRadioButton("not familiar");
 
         // Group the radio buttons
         ButtonGroup group = new ButtonGroup();
@@ -39,7 +41,7 @@ public class informationPage {
         group.add(level4);
 
         // Next Page Button
-        JButton nextButton = new JButton("صفحه بعد");
+        JButton nextButton = new JButton("next page");
         nextButton.addActionListener(e -> {
             // Remove current panel and move to Page2
             frame.remove(panel);

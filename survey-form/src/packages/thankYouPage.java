@@ -14,7 +14,7 @@ public class thankYouPage {
 
 
         // Create thank you label
-        JLabel thankYouLabel = new JLabel("با تشکر از مشارکت شما!");
+        JLabel thankYouLabel = new JLabel("Thank you for your participation!");
 
         // Add components to the panel
         panel.add(thankYouLabel,BorderLayout.CENTER);
