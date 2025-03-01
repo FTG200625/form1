@@ -1,54 +1,47 @@
 package packages;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class informationPage {
 
     public void create(JFrame frame) {
         // Create the main panel
         JPanel panel = new JPanel();
-        panel.setBounds(0, 0, 600, 600);
-        panel.setLayout(null);
 
+        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+        panel.setBackground(new Color(0xCF9518));
+      
         Font customFont = new Font("Comic Sans MS", Font.BOLD, 24);
 
         // Name Label and Text Field
-        JLabel nameLabel = new JLabel("اسم");
-        nameLabel.setBounds(10, 10, 100, 20);
+        JLabel nameLabel = new JLabel("name");
         nameLabel.setFont(customFont);
         JTextField nameField = new JTextField(15);
-        nameField.setBounds(50, 10, 100, 20);
 
         // Age Label and Text Field
-        JLabel ageLabel = new JLabel("سن");
-        ageLabel.setBounds(10, 50, 100, 20);
+
+        JLabel ageLabel = new JLabel("age");
         ageLabel.setFont(customFont);
         JTextField ageField = new JTextField(15);
-        ageField.setBounds(50, 50, 100, 20);
 
         // Email Label and Text Field
-        JLabel emailLabel = new JLabel("ایمیل");
-        emailLabel.setBounds(10, 90, 100, 20);
+        JLabel emailLabel = new JLabel("email");
         emailLabel.setFont(customFont);
         JTextField emailField = new JTextField(15);
-        emailField.setBounds(50, 90, 100, 20);
 
         // Software Familiarity Level
-        JLabel levelLabel = new JLabel("سطح آشنایی با نرم افزارهای مشابه");
-        levelLabel.setBounds(10, 130, 250, 20);
+
+        JLabel levelLabel = new JLabel("the level of familiarity to software:");
         levelLabel.setFont(customFont);
 
-        JRadioButton level1 = new JRadioButton("مبتدی");
-        level1.setBounds(10, 160, 100, 20);
+        JRadioButton level1 = new JRadioButton("begginer");
         level1.setFont(customFont);
-        JRadioButton level2 = new JRadioButton("متوسط");
-        level2.setBounds(100, 160, 100, 20);
+        JRadioButton level2 = new JRadioButton("intermediate");
         level2.setFont(customFont);
-        JRadioButton level3 = new JRadioButton("پیشرفته");
-        level3.setBounds(190, 160, 100, 20);
+        JRadioButton level3 = new JRadioButton("advanced");
         level3.setFont(customFont);
-        JRadioButton level4 = new JRadioButton("بدون آشنایی");
-        level4.setBounds(280, 160, 150, 20);
+        JRadioButton level4 = new JRadioButton("not familiar");
         level4.setFont(customFont);
 
         // Group the radio buttons
@@ -59,8 +52,7 @@ public class informationPage {
         group.add(level4);
 
         // Next Page Button
-        JButton nextButton = new JButton("صفحه بعد");
-        nextButton.setBounds(10, 200, 100, 20);
+        JButton nextButton = new JButton("next page");
         nextButton.setFont(customFont);
         nextButton.addActionListener(e -> {
             // Remove current panel and move to Page2
@@ -75,21 +67,38 @@ public class informationPage {
             frame.repaint();
         });
 
-        // Add components to the panel
+        // Add components to the panel with rigid areas for spacing
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Top spacing
         panel.add(nameLabel);
+        panel.add(Box.createRigidArea(new Dimension(0, 5)));  // Spacing between label and field
         panel.add(nameField);
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Spacing between fields
+
         panel.add(ageLabel);
+        panel.add(Box.createRigidArea(new Dimension(0, 5)));  // Spacing between label and field
         panel.add(ageField);
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Spacing between fields
+
         panel.add(emailLabel);
+        panel.add(Box.createRigidArea(new Dimension(0, 5)));  // Spacing between label and field
         panel.add(emailField);
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Spacing between fields
+
         panel.add(levelLabel);
+        panel.add(Box.createRigidArea(new Dimension(0, 5)));  // Spacing between label and radio buttons
+
         panel.add(level1);
         panel.add(level2);
         panel.add(level3);
         panel.add(level4);
+
+        panel.add(Box.createRigidArea(new Dimension(0, 20))); // Spacing before the button
+
         panel.add(nextButton);
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Bottom spacing
 
         // Add panel to the frame
         frame.add(panel);
     }
 }
+

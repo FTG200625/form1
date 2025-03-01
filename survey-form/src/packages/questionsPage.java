@@ -1,29 +1,33 @@
 package packages;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class questionsPage {
 
     public void create(JFrame frame) {
         // Create and configure the panel
         JPanel panel = new JPanel();
-        panel.setBounds(0, 0, 600, 600);
-        panel.setLayout(null);
+        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS)); // Use BoxLayout with PAGE_AXIS
+        panel.setBackground(new Color(0xCF9518)); // Set background color
+      
+        Font customFont = new Font("Comic Sans MS", Font.BOLD, 24);
 
         // Question 1
-        JLabel question1 = new JLabel("چقدر رابط کاربری نرم افزار از نظر شما جذاب است؟");
-        question1.setBounds(10, 10, 300, 20);
+        JLabel question1 = new JLabel("How attractive do you find the software's user interface?");
+        question1.setAlignmentX(Component.LEFT_ALIGNMENT); // Align label to the left
+        question1.setFont(customFont);
 
-        JRadioButton radio1_1 = new JRadioButton("۱");
-        radio1_1.setBounds(10, 40, 100, 20);
-        JRadioButton radio1_2 = new JRadioButton("۲");
-        radio1_2.setBounds(80, 40, 100, 20);
-        JRadioButton radio1_3 = new JRadioButton("۳");
-        radio1_3.setBounds(150, 40, 100, 20);
-        JRadioButton radio1_4 = new JRadioButton("۴");
-        radio1_4.setBounds(220, 40, 100, 20);
-        JRadioButton radio1_5 = new JRadioButton("۵");
-        radio1_5.setBounds(290, 40, 100, 20);
+        JRadioButton radio1_1 = new JRadioButton("1");
+        radio1_1.setFont(customFont);
+        JRadioButton radio1_2 = new JRadioButton("2");
+        radio1_2.setFont(customFont);
+        JRadioButton radio1_3 = new JRadioButton("3");
+        radio1_3.setFont(customFont);
+        JRadioButton radio1_4 = new JRadioButton("4");
+        radio1_4.setFont(customFont);
+        JRadioButton radio1_5 = new JRadioButton("5");
+        radio1_5.setFont(customFont);
 
         ButtonGroup group1 = new ButtonGroup();
         group1.add(radio1_1);
@@ -32,21 +36,34 @@ public class questionsPage {
         group1.add(radio1_4);
         group1.add(radio1_5);
 
+        // Create a horizontal box for radio buttons
+        Box radioBox1 = Box.createHorizontalBox();
+        radioBox1.add(radio1_1);
+        radioBox1.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox1.add(radio1_2);
+        radioBox1.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox1.add(radio1_3);
+        radioBox1.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox1.add(radio1_4);
+        radioBox1.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox1.add(radio1_5);
+
         // Question 2
-        JLabel question2 = new JLabel("آیا دسترسی به امکانات مختلف نرم افزار برای شما آسان است؟");
-        question2.setBounds(10, 90, 300, 20);
 
+        JLabel question2 = new JLabel("Is it easy for you to access the various features of the software?");
+        question2.setAlignmentX(Component.LEFT_ALIGNMENT); // Align label to the left
+        question2.setFont(customFont);
 
-        JRadioButton radio2_1 = new JRadioButton("۱");
-        radio2_1.setBounds(10, 120, 100, 20);
-        JRadioButton radio2_2 = new JRadioButton("۲");
-        radio2_2.setBounds(80, 120, 100, 20);
-        JRadioButton radio2_3 = new JRadioButton("۳");
-        radio2_3.setBounds(150, 120, 100, 20);
-        JRadioButton radio2_4 = new JRadioButton("۴");
-        radio2_4.setBounds(220, 120, 100, 20);
-        JRadioButton radio2_5 = new JRadioButton("۵");
-        radio2_5.setBounds(290, 120, 100, 20);
+        JRadioButton radio2_1 = new JRadioButton("1");
+        radio2_1.setFont(customFont);
+        JRadioButton radio2_2 = new JRadioButton("2");
+        radio2_2.setFont(customFont);
+        JRadioButton radio2_3 = new JRadioButton("3");
+        radio2_3.setFont(customFont);
+        JRadioButton radio2_4 = new JRadioButton("4");
+        radio2_4.setFont(customFont);
+        JRadioButton radio2_5 = new JRadioButton("5");
+        radio2_5.setFont(customFont);
 
         ButtonGroup group2 = new ButtonGroup();
         group2.add(radio2_1);
@@ -55,20 +72,34 @@ public class questionsPage {
         group2.add(radio2_4);
         group2.add(radio2_5);
 
-        // Question 3
-        JLabel question3 = new JLabel("چقدر طراحی صفحات نرم افزار ساده و کاربرپسند است؟");
-        question3.setBounds(10, 170, 300, 20);
+        // Create a horizontal box for radio buttons
+        Box radioBox2 = Box.createHorizontalBox();
+        radioBox2.add(radio2_1);
+        radioBox2.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox2.add(radio2_2);
+        radioBox2.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox2.add(radio2_3);
+        radioBox2.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox2.add(radio2_4);
+        radioBox2.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox2.add(radio2_5);
 
-        JRadioButton radio3_1 = new JRadioButton("۱");
-        radio3_1.setBounds(10, 200, 100, 20);
-        JRadioButton radio3_2 = new JRadioButton("۲");
-        radio3_2.setBounds(80, 200, 100, 20);
-        JRadioButton radio3_3 = new JRadioButton("۳");
-        radio3_3.setBounds(150, 200, 100, 20);
-        JRadioButton radio3_4 = new JRadioButton("۴");
-        radio3_4.setBounds(220, 200, 100, 20);
-        JRadioButton radio3_5 = new JRadioButton("۵");
-        radio3_5.setBounds(290, 200, 100, 20);
+        // Question 3
+        JLabel question3 = new JLabel("How simple and user-friendly do you find the design of the software's pages?");
+        question3.setAlignmentX(Component.LEFT_ALIGNMENT); // Align label to the left
+        question3.setFont(customFont);
+
+        JRadioButton radio3_1 = new JRadioButton("1");
+        radio3_1.setFont(customFont);
+        JRadioButton radio3_2 = new JRadioButton("2");
+        radio3_2.setFont(customFont);
+        JRadioButton radio3_3 = new JRadioButton("3");
+        radio3_3.setFont(customFont);
+        JRadioButton radio3_4 = new JRadioButton("4");
+        radio3_4.setFont(customFont);
+        JRadioButton radio3_5 = new JRadioButton("5");
+        radio3_5.setFont(customFont);
+      
 
         ButtonGroup group3 = new ButtonGroup();
         group3.add(radio3_1);
@@ -77,20 +108,33 @@ public class questionsPage {
         group3.add(radio3_4);
         group3.add(radio3_5);
 
-        // Question 4
-        JLabel question4 = new JLabel("آیا رنگ ها و فونت های استفاده شده در نرم افزار مناسب هستند؟");
-        question4.setBounds(10, 250, 350, 20);
+        // Create a horizontal box for radio buttons
+        Box radioBox3 = Box.createHorizontalBox();
+        radioBox3.add(radio3_1);
+        radioBox3.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox3.add(radio3_2);
+        radioBox3.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox3.add(radio3_3);
+        radioBox3.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox3.add(radio3_4);
+        radioBox3.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox3.add(radio3_5);
 
-        JRadioButton radio4_1 = new JRadioButton("۱");
-        radio4_1.setBounds(10, 280, 100, 20);
-        JRadioButton radio4_2 = new JRadioButton("۲");
-        radio4_2.setBounds(80, 280, 100, 20);
-        JRadioButton radio4_3 = new JRadioButton("۳");
-        radio4_3.setBounds(150, 280, 100, 20);
-        JRadioButton radio4_4 = new JRadioButton("۴");
-        radio4_4.setBounds(220, 280, 100, 20);
-        JRadioButton radio4_5 = new JRadioButton("۵");
-        radio4_5.setBounds(290, 280, 100, 20);
+        // Question 4
+        JLabel question4 = new JLabel("Are the colors and fonts used in the software appropriate?");
+        question4.setAlignmentX(Component.LEFT_ALIGNMENT); // Align label to the left
+        question4.setFont(customFont);
+
+        JRadioButton radio4_1 = new JRadioButton("1");
+        radio4_1.setFont(customFont);
+        JRadioButton radio4_2 = new JRadioButton("2");
+        radio4_2.setFont(customFont);
+        JRadioButton radio4_3 = new JRadioButton("3");
+        radio4_3.setFont(customFont);
+        JRadioButton radio4_4 = new JRadioButton("4");
+        radio4_4.setFont(customFont);
+        JRadioButton radio4_5 = new JRadioButton("5");
+        radio4_5.setFont(customFont);
 
         ButtonGroup group4 = new ButtonGroup();
         group4.add(radio4_1);
@@ -99,9 +143,23 @@ public class questionsPage {
         group4.add(radio4_4);
         group4.add(radio4_5);
 
+        // Create a horizontal box for radio buttons
+        Box radioBox4 = Box.createHorizontalBox();
+        radioBox4.add(radio4_1);
+        radioBox4.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox4.add(radio4_2);
+        radioBox4.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox4.add(radio4_3);
+        radioBox4.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox4.add(radio4_4);
+        radioBox4.add(Box.createRigidArea(new Dimension(10, 0))); // Spacing between buttons
+        radioBox4.add(radio4_5);
+
         // Next button to go to Page3
-        JButton nextButton = new JButton("صفحه بعد");
-        nextButton.setBounds(10, 320, 100, 20);
+
+        JButton nextButton = new JButton("next page");
+        nextButton.setAlignmentX(Component.LEFT_ALIGNMENT); // Align button to the left
+        nextButton.setFont(customFont);
         nextButton.addActionListener(e -> {
             frame.remove(panel);
             frame.revalidate();
@@ -114,34 +172,22 @@ public class questionsPage {
             frame.repaint();
         });
 
-        // Add components to the panel
+        // Add components to the panel with spacing
         panel.add(question1);
-        panel.add(radio1_1);
-        panel.add(radio1_2);
-        panel.add(radio1_3);
-        panel.add(radio1_4);
-        panel.add(radio1_5);
+        panel.add(radioBox1);
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Spacing
 
         panel.add(question2);
-        panel.add(radio2_1);
-        panel.add(radio2_2);
-        panel.add(radio2_3);
-        panel.add(radio2_4);
-        panel.add(radio2_5);
+        panel.add(radioBox2);
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Spacing
 
         panel.add(question3);
-        panel.add(radio3_1);
-        panel.add(radio3_2);
-        panel.add(radio3_3);
-        panel.add(radio3_4);
-        panel.add(radio3_5);
+        panel.add(radioBox3);
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Spacing
 
         panel.add(question4);
-        panel.add(radio4_1);
-        panel.add(radio4_2);
-        panel.add(radio4_3);
-        panel.add(radio4_4);
-        panel.add(radio4_5);
+        panel.add(radioBox4);
+        panel.add(Box.createRigidArea(new Dimension(0, 20))); // Spacing
 
         panel.add(nextButton);
 
